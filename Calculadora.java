@@ -18,6 +18,7 @@ public class Calculadora {
     }
 
     // Método principal para testar
+// Comentario preparatorio para o merge
     public static void main(String[] args) {
         Calculadora calc = new Calculadora();
         System.out.println("Divisão: " + calc.calcular("divisao", 10, 5));
