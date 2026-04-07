@@ -1,0 +1,59 @@
+# Passo 1 e 2: Configuração inicial e Identidade
+git init
+git config --global user.email "vitorhugodesousa13@gmail.com"
+git config --global user.name "Vitor Souza"
+
+# Passo 3: Adicionando arquivo inicial na branch principal (main)
+git add Calculadora.java
+git commit -m "Aluno 1: Inicio do trabalho"
+git push -u origin main
+
+# Passo 4, 5 e 6: Criação das branches para os outros alunos
+git branch amissao
+git branch oresgate
+git branch oamanhanuncamorre
+git push origin --all
+
+# Passo 8: Aluno 2 na branch amissao
+git checkout amissao
+(Substituição manual do arquivo Calculadora.java pelo arquivo da pasta branch-amissao)
+git add Calculadora.java
+git commit -m "Aluno 2: Arquivo da branch amissao"
+git push origin amissao
+
+# Passo 9: Aluno 3 na branch oresgate
+git checkout oresgate
+(Substituição manual do arquivo Calculadora.java pelo arquivo da pasta branch-oresgate)
+git add Calculadora.java
+git commit -m "Aluno 3: Arquivo da branch oresgate"
+git push origin oresgate
+
+# Passo 10: Aluno 4 na branch oamanhanuncamorre
+git checkout oamanhanuncamorre
+(Substituição manual do arquivo Calculadora.java pelo arquivo da pasta branch-oamanhanuncamorre)
+git add Calculadora.java
+git commit -m "Aluno 4: Arquivo da branch oamanhanuncamorre"
+git push origin oamanhanuncamorre
+
+# Passo 11: Comentário preparatório na branch principal
+git checkout main
+(Edição manual do arquivo para adicionar o comentário preparatório)
+git add Calculadora.java
+git commit -m "Adicionando comentario preparatorio na main"
+git push origin main
+
+# Passo 12: Simulação de Alunos (Merges e Resolução de Conflitos)
+git merge amissao
+(Saída do editor Vim com :wq)
+git push origin main
+
+git merge oresgate
+(Conflito detectado - Resolução manual no Bloco de Notas para unir as funções)
+git add Calculadora.java
+git commit -m "Resolvendo conflito com a branch oresgate"
+
+git merge oamanhanuncamorre
+(Resolução de conflitos finais)
+git add Calculadora.java
+git commit -m "Merge final e união de todas as funções"
+git push origin main
